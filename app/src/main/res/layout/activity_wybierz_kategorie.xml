@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_wybierz_kategorie"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@drawable/tloand2"
+    tools:context="com.bidzis.quizandroid.rozgrywka.WybierzKategorieActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="casual"
+        android:textSize="42sp"
+        android:textStyle="normal|bold|italic"
+        android:textAlignment="center"
+        android:alpha="0.5"
+        android:textColor="@android:color/background_dark"
+        android:id="@+id/tvNaglowekWybierzKategorie"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:text="Wybierz Kategorie"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+
+    <ListView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/wybierzKategorielistView"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/tvNaglowekWybierzKategorie"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="10.0sp"
+        android:alpha="0.5"
+        />
+
+</RelativeLayout>

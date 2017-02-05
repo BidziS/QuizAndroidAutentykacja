@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_wybierz_tryb"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@drawable/tloand2"
+    tools:context="com.bidzis.quizandroid.rozgrywka.WybierzTrybActivity">
+
+    <TextView
+        android:text="Wybierz Tryb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/textView2"
+        android:fontFamily="casual"
+        android:textSize="52sp" />
+
+    <Button
+        android:text="Czasowy"
+        android:layout_width="match_parent"
+        android:layout_height="245dp"
+        android:layout_below="@+id/btTrybNormalnyWybierzTrybActivity"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/btTrybCzasowyWybierzTrybActivity"
+        android:layout_marginTop="2dp"
+        android:fontFamily="casual"
+        android:textSize="52dp"
+        android:alpha="0.5"
+        android:textColor="@android:color/background_dark" />
+
+    <Button
+        android:text="Normalny"
+        android:layout_width="match_parent"
+        android:id="@+id/btTrybNormalnyWybierzTrybActivity"
+        android:layout_below="@+id/textView2"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_height="245dp"
+        android:layout_marginBottom="2dp"
+        android:textSize="52dp"
+        android:fontFamily="casual"
+        android:alpha="0.5"
+        android:textColor="@android:color/background_dark" />
+
+
+</RelativeLayout>

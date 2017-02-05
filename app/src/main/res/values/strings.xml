@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">QuizAndroid</string>
+    <string name="ip">http://192.168.56.1:8080</string>
+</resources>
