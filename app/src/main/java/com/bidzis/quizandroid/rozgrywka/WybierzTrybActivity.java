@@ -30,16 +30,18 @@ public class WybierzTrybActivity extends AppCompatActivity {
                 intent.putExtra("idUzytkownika",idUzytkownika);
                 intent.putExtra("idTryb",idTrybNormalny);
                 WybierzTrybActivity.this.startActivity(intent);
+                finish();
 
             }
         });
         czasowyTryb.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(WybierzTrybActivity.this, TrybCzasowyActivity.class);
+                Intent intent = new Intent(WybierzTrybActivity.this, WybierzKategorieActivity.class);
                 intent.putExtra("idUzytkownika",idUzytkownika);
-                intent.putExtra("idTryb",idTrybNormalny);
+                intent.putExtra("idTryb",idTrybCzasowy);
                 WybierzTrybActivity.this.startActivity(intent);
+                finish();
             }
         });
     }

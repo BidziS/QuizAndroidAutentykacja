@@ -42,7 +42,7 @@ public class TrybNormalnyActivity extends AppCompatActivity {
     final ArrayList<PytaniaClass> pytaniaArray = new ArrayList<>();
     final int[] i = {0};
     int punkty = 0;
-    public CountDownTimer countDownTimer;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -60,18 +60,7 @@ public class TrybNormalnyActivity extends AppCompatActivity {
         //final RequestQueue requestQueue = Volley.newRequestQueue(this);
         String url = getString(R.string.ip)+"/quizAndroid/pytania/losujPoKategorii/"+idKategorii;
 
-        countDownTimer = new CountDownTimer(20000, 1000) {
 
-            public void onTick(long millisUntilFinished) {
-                tvCounter.setText(String.valueOf(millisUntilFinished / 1000));
-                //here you can have your logic to set text to edittext
-            }
-
-            public void onFinish() {
-
-            }
-
-        };
 
 
         pobierzListePytan(url, tvPytanie,pytaniaArray,idTryb, idUzytkownika,tvCounter);
@@ -163,7 +152,6 @@ public class TrybNormalnyActivity extends AppCompatActivity {
                                 e.printStackTrace();
                             }
                         }
-                        countDownTimer.start();
                         PytaniaClass pytaniaClass = pytaniaArray.get(i[0]);
                         tvPytanie.setText(pytaniaClass.pytanie);
                         JSONArray[] jsonArray = {null};
@@ -197,9 +185,8 @@ public class TrybNormalnyActivity extends AppCompatActivity {
                                             view.setBackgroundColor(Color.GREEN);
                                             view.setSelected(true);
 
-                                            punkty += Integer.valueOf(tvCouner.getText().toString());
-//                                            punkty += 10;
-                                            countDownTimer.cancel();
+                                            punkty += 10;
+
                                             try {
                                                 zapiszPkt(urlZapiszPkt,punkty,idUzytkownika,idTryb);
                                             } catch (JSONException e) {
@@ -228,7 +215,7 @@ public class TrybNormalnyActivity extends AppCompatActivity {
                                     if(odpowiedziAdapter.data.get(position).poprawna){
                                         view.setBackgroundColor(Color.GREEN);
                                         view.setSelected(true);
-                                        punkty += Integer.valueOf(tvCouner.getText().toString());
+
                                         punkty += 10;
                                     }
                                     else{
@@ -306,6 +293,7 @@ public class TrybNormalnyActivity extends AppCompatActivity {
                         intent.putExtra("id",idUzytkownika);
                         TrybNormalnyActivity.this.startActivity(intent);
                         dialog.dismiss();
+                        finish();
                     }
                 });
         alertDialog.show();

@@ -86,12 +86,23 @@ public class WybierzKategorieActivity extends AppCompatActivity {
                                 String idKatrgorii = String.valueOf(idKategoriInt);
                                 Toast.makeText(getApplicationContext(), nazwaKategorii,
                                         Toast.LENGTH_SHORT).show();
-                                Intent intent = new Intent(WybierzKategorieActivity.this, TrybNormalnyActivity.class);
-                                intent.putExtra("id",idKatrgorii);
-                                intent.putExtra("idUzytkownika",idUzytkownika);
-                                intent.putExtra("idTryb",idTryb);
-                                WybierzKategorieActivity.this.startActivity(intent);
-                                finish();
+                                if (Integer.valueOf(idTryb)== 1){
+                                    Intent intent = new Intent(WybierzKategorieActivity.this, TrybNormalnyActivity.class);
+                                    intent.putExtra("id",idKatrgorii);
+                                    intent.putExtra("idUzytkownika",idUzytkownika);
+                                    intent.putExtra("idTryb",idTryb);
+                                    WybierzKategorieActivity.this.startActivity(intent);
+                                    finish();
+                                }else if(Integer.valueOf(idTryb)== 2){
+                                    Intent intent = new Intent(WybierzKategorieActivity.this, TrybCzasowyActivity.class);
+                                    intent.putExtra("id",idKatrgorii);
+                                    intent.putExtra("idUzytkownika",idUzytkownika);
+                                    intent.putExtra("idTryb",idTryb);
+                                    WybierzKategorieActivity.this.startActivity(intent);
+                                    finish();
+                                }
+
+
                             }
                         });
                     }

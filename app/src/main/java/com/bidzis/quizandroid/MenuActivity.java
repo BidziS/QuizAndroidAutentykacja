@@ -32,6 +32,7 @@ public class MenuActivity extends AppCompatActivity {
                 Intent intent = new Intent(MenuActivity.this, WybierzTrybActivity.class);
                 intent.putExtra("idUzytkownika",idUzytkownika);
                 MenuActivity.this.startActivity(intent);
+                finish();
             }
         });
 
@@ -51,6 +52,7 @@ public class MenuActivity extends AppCompatActivity {
                 Intent intent = new Intent(MenuActivity.this, RankingWybierzActivity.class);
                 intent.putExtra("id",idUzytkownika);
                 MenuActivity.this.startActivity(intent);
+                finish();
             }
         });
 
